@@ -1,0 +1,26 @@
+.post{
+    border-style: dotted;
+    border-color: #6C7592;
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 10px;
+    
+        p{
+        // border-color: green;
+        // border-style: dashed;
+    }
+
+    .post-properties{
+        // border-color: red;
+        // border-style: dashed;
+        margin-left: 700px;
+    }
+    
+    a:visited{
+        color: black;
+    }
+    a:link{
+        color: black;
+    }
+}

@@ -1,0 +1,36 @@
+.login-container {
+  border: 2px solid;
+  border-color: green;
+  border-style: dashed;
+
+  .login-form-container {
+    border: 2px solid;
+    border-color: red;
+    border-style: dashed;
+  }
+
+  Form {
+    width: 30%;
+    margin-top: 200px;
+    margin-left: 450px;
+
+    .forgot-password {
+      text-decoration: none;
+      margin-left: 15px;
+    }
+    .form-text {
+      color: rgba(70, 63, 63, 0.74);
+    }
+
+    .new-account {
+      width: auto;
+      height: auto;
+      display: block;
+      font-size: 14px;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
