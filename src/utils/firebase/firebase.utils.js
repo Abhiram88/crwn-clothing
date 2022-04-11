@@ -1,5 +1,14 @@
+import { async } from '@firebase/util';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import { getFirestore,
+         doc, 
+         getDoc,
+         setDoc,
+        } from 'firebase/firestore'
+
+  //doc method retrieves documents stored inside firebase. to access those documnets
+  // we use getDoc
 
 const firebaseConfig = {
     apiKey: "AIzaSyDVsNPpMVZOIxUTbkBcIQX7DVorFMYNEbs",
@@ -22,4 +31,32 @@ const firebaseConfig = {
   export const signInWithGooglePopup = () => {
       return signInWithPopup(auth, provider)
   };
+
+  export const db = getFirestore();
+
+  export const createUserDocumentFromAuth = async (userAuth) => {
+    const userDocRef = doc(db, "users", userAuth.uid);
+    console.log(userDocRef);
+
+    const userSnapshot = await getDoc(userDocRef);
+    if(!userSnapshot.exists()){
+        const {displayName, email} = userAuth;
+        const createdAt = new Date();
+
+        try{
+            await setDoc(userDocRef, {
+                displayName,
+                email,
+                createdAt
+            });
+            console.log(`New user created: ${email}`);
+        }catch(e){
+            console.log(e);
+        }
+    }
+
+    return userDocRef;
+  }
+
+
 

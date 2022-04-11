@@ -61,7 +61,7 @@ const PostWall = ({ data }) => {
               </Button>
               <button
                 type="submit"
-                class="btn btn-success postbutton"
+                className="btn btn-success postbutton"
                 onClick={handleClose}
               >
                 Post

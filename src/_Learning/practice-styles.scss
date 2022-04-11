@@ -1,0 +1,38 @@
+.main{
+    border-style: dotted;
+    border-color: aqua;
+
+    .row-1{
+        border-style: dotted;
+        border-color: green;
+        border-right: 1px;
+        border-bottom: 1px;
+        height: 500px;
+    }
+
+    .row-2{
+        border-style: dotted;
+        border-color: green;
+        border-right: 1px;
+        border-bottom: 1px;
+        height: 500px;
+    }
+
+    .col-1{
+        border-bottom: 1px solid pink; 
+        border-right: 1px solid pink;     
+        width: 33.33%;  
+    }
+
+    .col-2{
+        border-bottom: 1px solid pink; 
+        border-right: 1px solid pink; 
+        width: 33.33%;  
+    }
+
+    .col-3{
+        border-bottom: 1px solid pink; 
+        border-right: 1px solid pink; 
+        width: 33.33%;  
+    }
+}

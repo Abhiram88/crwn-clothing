@@ -12,7 +12,7 @@ import Wall from './_TEST/wall';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Main />
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
