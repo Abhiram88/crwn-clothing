@@ -3,7 +3,6 @@ import PRODUCTS from "../shop-data.json";
 
 export const ProductsContext = createContext({
   products: [],
-  setCurrentProduct: () => null,
 });
 
 export const ProductsProvider = ({ children }) => {
