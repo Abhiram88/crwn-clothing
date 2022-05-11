@@ -10,7 +10,6 @@ import { CategoriesProvider } from './contexts/categories.context';
 import { CartProvider } from './contexts/cart.context';
 
 import reportWebVitals from './reportWebVitals';
-import Main from '../src/_TEST/main'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
