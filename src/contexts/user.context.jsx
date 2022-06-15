@@ -16,7 +16,6 @@ export const UserContext = createContext({
 // Provider is the component that wraps around other components that require access the value eg:UserContext.Provider
 export const UserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
-  const value = { currentUser, setCurrentUser };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {
@@ -28,6 +27,8 @@ export const UserProvider = ({ children }) => {
     });
     return unsubscribe;
   }, []);
+
+  const value = { currentUser, setCurrentUser };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
